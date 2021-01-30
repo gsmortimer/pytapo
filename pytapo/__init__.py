@@ -159,7 +159,7 @@ class Tapo:
         if len(label) >= 16:
             raise Exception("Error: Label cannot be longer than 16 characters")
         elif len(label) == 0:
-            labelEnabled = False
+            data["OSD"]["label_info_1"]["enabled"] = "off"
         else:
             data["OSD"]["label_info_1"]["text"] = label
         if (
